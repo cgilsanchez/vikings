@@ -18,7 +18,9 @@
 }
 
 
-* {box-sizing:border-box;}   
+* {box-sizing:border-box;
+margin:  0;
+padding: 0;}   
 
 body { background-color: rgb(129, 6, 6); /* ya lo quitaré */
   font-family:texto;
@@ -141,6 +143,7 @@ nav {position:sticky;
       padding:15px;
       margin-top:20%;
       color:rgb(129, 6, 6);
+    
 }
 
 
@@ -153,16 +156,31 @@ nav {position:sticky;
           padding:0 2%;
           margin: 100px;
           color: #ffffff;
+          text-align: justify;
+}
           
-          }
+.container2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
           
-          
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 
 /**************************** SECCIÓN RESUMEN ********************************/
 
-#ideas {background-color: #000000;
+#resumen {background-color: #000000;
         color: #fdfdfd;}
 
 /**** contenedor grid  **************/
@@ -171,7 +189,10 @@ nav {position:sticky;
 
 /**** que corra el aire (ver box-sizing arriba) ***/
 .texto {padding:20px;
-    font-size:1.2rem;}
+    font-size:1.2rem;
+  text-align: justify;
+    padding-left: 8%;
+    padding-right: 8%;}
 
 .texto li {margin-bottom:12px;}
 
@@ -223,6 +244,12 @@ nav {position:sticky;
 
 .card img:hover {opacity:1;}   /* al poner el ratón encima, se define completamente la imagen */
 
+.card p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
 .card a {text-decoration: none;
     font-weight:bold;
     background-color: rgb(179, 65, 65);
@@ -231,7 +258,7 @@ nav {position:sticky;
     color:white;
     padding:10px;
     margin-bottom:10px;
-    display:inline-block;}  /* separa el bloque superior y el inferior, pero no ocupa el espacio de punta
+    display:inline-block;}     /* separa el bloque superior y el inferior, pero no ocupa el espacio de punta
                                 a punta, si hubiera otro inline-block, lo pondría a continuación...
                                 ***** ES LO QUE SE USA EN LAS BARRAS DE NAVEGACIÓN *********************/
 
